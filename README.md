@@ -11,7 +11,7 @@
 
   - Choose two from ToDos, Posts, Albums, Photos, or Comments
 
-- [ ] There should be a top-level nav menu that lets the website user see all of each of the three resources: users plus the two other resources that you choose.
+- [x] There should be a top-level nav menu that lets the website user see all of each of the three resources: users plus the two other resources that you choose.
 - [ ] React Router should be used for all navigation.
 - [ ] Clicking the link to one of the two related resources from a given user list item will show only the elements for that user.
 - [ ] Clicking anywhere else on the user list item should display full details for the selected user including links to the two related resource lists.
@@ -24,5 +24,6 @@
 
 - [ ] Decide on colour scheme for app
 - [ ] Choose Serif and Sans-Serif Fonts
+- [ ] convert css to sass for 'App.css'
 
 ## Bugs:

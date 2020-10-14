@@ -1,4 +1,22 @@
-.App {
+
+/* Selctor rule for all css: */
+/* *{
+  font-size: 16px;
+} */
+/* Css for the 'pages' */
+.page{
+  /* Make the page take up majority of the screen */
+  width: 100vw;
+  height: 80vh;
+  padding: 1rem;
+
+  /* flexbox setttings */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +53,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
