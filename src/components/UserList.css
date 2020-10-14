@@ -1,0 +1,4 @@
+.users-menu{
+    display: flex;
+    flex-flow: row nowrap;
+}
