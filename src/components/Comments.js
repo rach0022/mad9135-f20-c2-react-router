@@ -22,7 +22,6 @@ function Comments() {
     //if we get here we have comments and no errors so lets map them to a JSX element and return that componenet
     const commentElements = comments.map(comment =>
         <li key={comment.id}>
-            {/* Email: {comment.email} Title: {comment.title} Comment: {comment.body} */}
             <div className={comment}>
                 <h4>{comment.name}</h4>
                 <p>{comment.email}</p>
