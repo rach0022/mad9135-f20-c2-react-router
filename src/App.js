@@ -43,15 +43,15 @@ function App() {
             </Route>
 
             <Route path="/posts/:userId">
-              <UserPosts />
+              <UserPosts posts={posts} error={postErrors} />
             </Route>
 
             <Route path="/albums/:userId">
-              <UserAlbums />
+              <UserAlbums albums={albums} error={albumErrors} />
             </Route>
 
             <Route path="/details/:userId">
-              <UserDetails />
+              <UserDetails users={users} error={userErrors} />
             </Route>
 
             <Route>
