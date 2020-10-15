@@ -29,4 +29,4 @@
 
 ## Bugs:
 
-- [ ] ISS-01 Change UserPosts & UserAlbums to UserComments and UserPhotos
+- [x] ISS-01 Change Comments and Photos to Posts and Albums for assignment requirements

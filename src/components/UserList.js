@@ -26,8 +26,8 @@ function Users() {
         <li key={user.id}>
             <div className="user">
                 <p>{user.name}</p>
-                <Link to={`/posts/${user.id}`}>Posts</Link>
                 <Link to={`/albums/${user.id}`}>Albums</Link>
+                <Link to={`/posts/${user.id}`}>Posts</Link>
             </div>
         </li>
     )

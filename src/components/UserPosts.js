@@ -10,7 +10,6 @@ function UserPosts() {
 
     //now lets use params and get the userId from the url
     const { userId } = useParams()
-
     // Now using our FetchJSON function and the useEFffect function from React we can fetch
     // The JSON data for the photos and set either that or an error (if failed)
     useEffect(() => {
@@ -24,7 +23,12 @@ function UserPosts() {
     if (error) return (<div>{error.message}</div>)
 
     //if we get here we have comments and no errors so lets map them to a JSX element and return that componenet
-    const postElements = userPosts.map(post => <li key={post.id}>{post.title}</li>)
+    const postElements = userPosts.map(post =>
+        <li key={post.id}>
+            <h5>{post.title}</h5>
+            <article>{post.body}</article>
+        </li>
+    )
 
     return (
         <div className="page">

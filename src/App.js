@@ -27,11 +27,11 @@ function App() {
               <UserList />
             </Route>
 
-            <Route path="/albums">
+            <Route exact path="/albums">
               <Albums />
             </Route>
 
-            <Route path="/posts">
+            <Route exact path="/posts">
               <Posts />
             </Route>
 
