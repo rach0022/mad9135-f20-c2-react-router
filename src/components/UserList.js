@@ -28,6 +28,7 @@ function Users() {
                 <p>{user.name}</p>
                 <Link to={`/albums/${user.id}`}>Albums</Link>
                 <Link to={`/posts/${user.id}`}>Posts</Link>
+                <Link to={`/details/${user.id}`}>Details</Link>
             </div>
         </li>
     )

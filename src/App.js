@@ -9,6 +9,7 @@ import Albums from './components/Albums.js'
 import Posts from './components/Posts.js'
 import UserPosts from './components/UserPosts.js'
 import UserAlbums from './components/UserAlbums.js'
+import UserDetails from './components/UserDetails.js'
 import NotFound from './components/NotFound.js'
 
 function App() {
@@ -41,6 +42,10 @@ function App() {
 
             <Route path="/albums/:userId">
               <UserAlbums />
+            </Route>
+
+            <Route path="/details/:userId">
+              <UserDetails />
             </Route>
 
             <Route>
