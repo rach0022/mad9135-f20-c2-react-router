@@ -2,9 +2,12 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import './UserAlbums.css'
 
-function UserAlbums({ albums: userAlbums, error }) {
+function UserAlbums({ albums: userAlbums, error, users }) {
     //first lets use params and get the userId from the url
     const { userId } = useParams()
+
+    //if we have users lets find the spefic user entry and or just have null
+    const user = (users) ? users.find(u => u.id === parseInt(userId)) : { name: 'null' }
 
     // Now check if we have comments and errors and return the appropriate type
     if (userAlbums) {
@@ -19,7 +22,7 @@ function UserAlbums({ albums: userAlbums, error }) {
         return (
             <div className="page">
                 <div className="UserAlbums">
-                    <h1>Users Albums</h1>
+                    <h1>{user.name} Albums</h1>
                     <ul>
                         {albumElements}
                     </ul>

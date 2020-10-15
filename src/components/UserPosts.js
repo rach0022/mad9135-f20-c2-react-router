@@ -2,9 +2,12 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import './UserPosts.css'
 
-function UserPosts({ posts: userPosts, error }) {
+function UserPosts({ posts: userPosts, error, users }) {
     //first lets get the userId from the url
     const { userId } = useParams()
+
+    //if we have users lets find the spefic user entry and or just have null
+    const user = (users) ? users.find(u => u.id === parseInt(userId)) : { name: 'null' }
 
     // Now check if we have comments and errors and return the appropriate type
     if (userPosts) {
@@ -22,7 +25,7 @@ function UserPosts({ posts: userPosts, error }) {
         return (
             <div className="page">
                 <div className="UserPosts">
-                    <h1>Users Posts</h1>
+                    <h1>{user.name} Posts</h1>
                     <ul>
                         {postElements}
                     </ul>
