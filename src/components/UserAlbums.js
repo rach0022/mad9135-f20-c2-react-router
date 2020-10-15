@@ -16,14 +16,18 @@ function UserAlbums({ albums: userAlbums, error, users }) {
 
         //if we get here we have comments and no errors so lets map them to a JSX element and return that componenet
         const albumElements = filteredAlbums.map(album =>
-            <li key={album.id}>{album.title}</li>
+            <div key={album.id} className="card">
+                <div className="card-header">
+                    <p className="card-header-title">{album.title}</p>
+                </div>
+            </div>
         )
 
         return (
             <div className="page">
                 <div className="UserAlbums">
                     <header>
-                        <h1>{user.name} Albums</h1>
+                        <p className="title">{user.name} Albums</p>
                     </header>
                     <main>
                         <ul>

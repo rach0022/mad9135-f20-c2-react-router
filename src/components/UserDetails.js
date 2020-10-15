@@ -22,26 +22,31 @@ function UserDetails({ users: userDetails, error }) {
 
         //if we get here we have comments and no errors so lets map them to a JSX element and return that componenet
         const detailsElements = filteredDetails.map(detail =>
-            <div key={detail.id} className="userDetails">
-                <div className="user-info">
-                    <div className="general-details">
-                        <p className="name">{detail.name}</p>
-                        <p className="username">{detail.username}</p>
-                        <p className="email">{detail.email}</p>
-                        <p className="phone">{detail.phone}</p>
-                        <a href={detail.website}>{detail.website}</a>
-                    </div>
-                    <div className="address-info">
-                        <p className="street">{detail.address.street}</p>
-                        <p className="suite">{detail.address.suite}</p>
-                        <p className="city">{detail.address.city}</p>
-                        <p className="zipcode">{detail.address.zipcode}</p>
-                        <p className="coordinates">{detail.address.geo.lat}, {detail.address.geo.lng}</p>
-                    </div>
-                    <div className="company">
-                        <p className="company-name">{detail.company.name}</p>
-                        <p className="company-phrase">{detail.company.catchPhrase}</p>
-                        <p className="company-bs">{detail.company.bs}</p>
+            <div key={detail.id} className="userDetails card">
+                <div className="user-info card-header">
+                    <p className="title">{detail.name}</p>
+                    <p className="subtitle">{detail.username}</p>
+
+                </div>
+                <div className="card-content">
+                    <div className="content">
+                        <div className="general-details">
+                            <p className="email">{detail.email}</p>
+                            <p className="phone">{detail.phone}</p>
+                            <a href={detail.website}>{detail.website}</a>
+                        </div>
+                        <div className="address-info">
+                            <p className="street">{detail.address.street}</p>
+                            <p className="suite">{detail.address.suite}</p>
+                            <p className="city">{detail.address.city}</p>
+                            <p className="zipcode">{detail.address.zipcode}</p>
+                            <p className="coordinates">{detail.address.geo.lat}, {detail.address.geo.lng}</p>
+                        </div>
+                        <div className="company">
+                            <p className="company-name">{detail.company.name}</p>
+                            <p className="company-phrase">{detail.company.catchPhrase}</p>
+                            <p className="company-bs">{detail.company.bs}</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -52,8 +57,7 @@ function UserDetails({ users: userDetails, error }) {
             <div className="page">
                 <div className="UserDetails">
                     <header>
-                        <button onClick={viewHome}>Home</button>
-                        <h1>Detailed View of User</h1>
+                        <button className="button" onClick={viewHome}>Home</button>
                     </header>
                     <main>
                         <ul>

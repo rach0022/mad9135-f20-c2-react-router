@@ -20,19 +20,19 @@ li{
 }
 
 .link{
-    height: 20px;
+    /* height: 20px; */
     width: auto;
-    text-decoration: none;
+    /* text-decoration: none; */
     color: #8fc866;
 
     /* background for button */
-    background: none;
-    line-height: 1;
-    margin: 0.5rem;
+    /* background: none; */
+    /* line-height: 1; */
+    /* margin: 0.5rem; */
 
     /* border for button */
-    border: 2px solid #8fc866;
-    border-radius: 15%;
+    /* border: 2px solid #8fc866; */
+    /* border-radius: 15%; */
     padding: 0.2rem 0.4rem;
 }
 

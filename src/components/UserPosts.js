@@ -16,22 +16,24 @@ function UserPosts({ posts: userPosts, error, users }) {
 
         //if we get here we have comments and no errors so lets map them to a JSX element and return that componenet
         const postElements = filteredPosts.map(post =>
-            <li key={post.id}>
-                <h5>{post.title}</h5>
-                <article>{post.body}</article>
-            </li>
+            <div key={post.id} className="post card">
+                <div className="card-header">
+                    <p className="card-header-title">#{post.id}: <em>{post.title}</em></p>
+                </div>
+                <div className="card-content">
+                    <article>{post.body}</article>
+                </div>
+            </div>
         )
 
         return (
             <div className="page">
                 <div className="UserPosts">
                     <header>
-                        <h1>{user.name} Posts</h1>
+                        <p className="title">{user.name} Posts</p>
                     </header>
                     <main>
-                        <ul>
-                            {postElements}
-                        </ul>
+                        {postElements}
                     </main>
                 </div>
             </div>

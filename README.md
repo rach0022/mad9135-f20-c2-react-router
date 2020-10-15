@@ -27,6 +27,8 @@
 - [ ] Choose Serif and Sans-Serif Fonts
 - [x] convert css to sass for 'App.css'
 - [x] add dependancies for bulma with yarn add bulma
+- [ ] fix bug with bulma nav burger/menu interaction
+- [ ] update styles on userdetails cards
 
 ## Bugs:
 

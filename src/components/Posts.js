@@ -9,12 +9,14 @@ function Posts({ posts, error }) {
 
     //if we get here we have posts and no errors so lets map them to a JSX element and return that componenet
     const postElements = posts.map(post =>
-        <li key={post.id}>
-            <div className="post">
-                <h4>#{post.id}: <em>{post.title}</em></h4>
+        <div key={post.id} className="post card">
+            <div className="card-header">
+                <p className="card-header-title">#{post.id}: <em>{post.title}</em></p>
+            </div>
+            <div className="card-content">
                 <article>{post.body}</article>
             </div>
-        </li>
+        </div>
     )
 
     //now return our formatted JSX element
@@ -22,13 +24,11 @@ function Posts({ posts, error }) {
         <div className="page">
             <div className="posts-menu">
                 <header>
-                    <h1>All Posts</h1>
-                    <p>Time: <em>{new Date().toString()}</em></p>
+                    <p className="title">All Posts</p>
+                    <p className="subtitle">Time: <em>{new Date().toString()}</em></p>
                 </header>
                 <main>
-                    <ul>
-                        {postElements}
-                    </ul>
+                    {postElements}
                 </main>
             </div>
         </div>
