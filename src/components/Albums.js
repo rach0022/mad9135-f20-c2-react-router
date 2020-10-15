@@ -12,8 +12,11 @@ function Albums({ albums, error }) {
     return (
         <div className="page">
             <div className="album-menu">
-                <h1>All Albums</h1>
-                {albumElements}
+                <header>
+                    <h1>All Albums</h1>
+                    <p>Time: <em>{new Date().toString()}</em></p>
+                </header>
+                <ul>{albumElements}</ul>
             </div>
         </div>
     )

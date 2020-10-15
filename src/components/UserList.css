@@ -1,0 +1,34 @@
+/* Container for user cards */
+.user{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container for buttons in card */
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-self: right;
+    justify-content: space-around;
+}
+
+.link{
+    height: 20px;
+    width: auto;
+    text-decoration: none;
+    color: #8fc866;
+
+    /* background for button */
+    background: none;
+    line-height: 1;
+    margin: 0.5rem;
+
+    /* border for button */
+    border: 2px solid #8fc866;
+    border-radius: 15%;
+    padding: 0.2rem 0.4rem;
+}
+
+.link:hover{
+    background: #8fc86680;
+}

@@ -11,7 +11,7 @@ function Posts({ posts, error }) {
     const postElements = posts.map(post =>
         <li key={post.id}>
             <div className="post">
-                <h4>{post.title}</h4>
+                <h4>#{post.id}: <em>{post.title}</em></h4>
                 <article>{post.body}</article>
             </div>
         </li>
@@ -21,7 +21,10 @@ function Posts({ posts, error }) {
     return (
         <div className="page">
             <div className="posts-menu">
-                <h1>Posts</h1>
+                <header>
+                    <h1>All Posts</h1>
+                    <p>Time: <em>{new Date().toString()}</em></p>
+                </header>
                 <ul>
                     {postElements}
                 </ul>

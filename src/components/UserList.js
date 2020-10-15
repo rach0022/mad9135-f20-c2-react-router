@@ -24,9 +24,15 @@ function Users({ users, error }) {
     const userElements = users.map(user =>
         <li key={user.id} id={`user-${user.id}`} onClick={viewDetails}>
             <div className="user">
-                <p>{user.name}</p>
-                <Link to={`/albums/${user.id}`} onClick={stopEventBubbling} >Albums</Link>
-                <Link to={`/posts/${user.id}`} onClick={stopEventBubbling} >Posts</Link>
+                <div className="user-details">
+                    <p>{user.name}</p>
+                    <p>{user.email}</p>
+                    <p>{user.company.name}</p>
+                </div>
+                <div className="buttons">
+                    <Link to={`/albums/${user.id}`} onClick={stopEventBubbling} className="link">Albums</Link>
+                    <Link to={`/posts/${user.id}`} onClick={stopEventBubbling} className="link">Posts</Link>
+                </div>
             </div>
         </li>
     )
