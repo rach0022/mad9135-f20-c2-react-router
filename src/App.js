@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 // import logo from './logo.svg';
 import './App.css';
+//import modules
+import useJSONAPIState from './modules/useJSONAPIState'
 // import components
 import AppNav from './components/AppNav.js'
 import UserList from './components/UserList.js'
@@ -14,6 +16,10 @@ import NotFound from './components/NotFound.js'
 
 function App() {
 
+  const [users, userErrors] = useJSONAPIState({ route: 'users' })
+  const [posts, postErrors] = useJSONAPIState({ route: 'posts' })
+  const [albums, albumErrors] = useJSONAPIState({ route: 'albums' })
+
   return (
     <div className="React-Nav-App">
       <Router>
@@ -25,15 +31,15 @@ function App() {
 
           <Switch>
             <Route exact path="/">
-              <UserList />
+              <UserList users={users} error={userErrors} />
             </Route>
 
             <Route exact path="/albums">
-              <Albums />
+              <Albums albums={albums} error={albumErrors} />
             </Route>
 
             <Route exact path="/posts">
-              <Posts />
+              <Posts posts={posts} error={postErrors} />
             </Route>
 
             <Route path="/posts/:userId">

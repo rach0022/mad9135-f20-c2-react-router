@@ -1,21 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import fetchJSON from '../modules/fetch.service.js'
 import './UserList.css'
 
-function Users() {
-    // console.log(users)
-    // First lets set some variables with useState for the user and an error
-    const [users, setUsers] = useState()
-    const [error, setErrors] = useState()
-
-    // Now using our FetchJSON function and the useEFffect function from React we can fetch
-    // The JSON data for the users and set either that or an error (if failed)
-    useEffect(() => {
-        fetchJSON({ route: 'users' })
-            .then(_users => setUsers(_users))
-            .catch(err => setErrors(err))
-    }, [])
+function Users({ users, error }) {
 
     //if we get back no users lets return nothing for the user list or if we have an error show it
     if (!users) return null

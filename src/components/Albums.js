@@ -1,19 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import fetchJSON from '../modules/fetch.service.js'
+import React from 'react'
 import './Albums.css'
 
-function Albums() {
-    //First lets set up our varaibles with useState
-    const [albums, setAlbums] = useState()
-    const [error, setErrors] = useState()
-
-    // Now using our FetchJSON function and the useEFffect function from React we can fetch
-    // The JSON data for the photos and set either that or an error (if failed)
-    useEffect(() => {
-        fetchJSON({ route: 'albums' })
-            .then(_albums => setAlbums(_albums))
-            .catch(err => setErrors(err))
-    }, [])
+function Albums({ albums, error }) {
 
     //Now to check if we have photos or an error
     if (!albums) return null

@@ -1,25 +1,13 @@
-import React, { useState, useEffect } from 'react'
-import fetchJSON from '../modules/fetch.service.js'
+import React from 'react'
 import './Posts.css'
 
-function Posts() {
-    // First set up some state varibles with the useState to then use the hooks api to fetch data
-    const [posts, setPosts] = useState()
-    const [error, setErrors] = useState()
+function Posts({ posts, error }) {
 
-    // Now using our FetchJSON function and the useEFffect function from React we can fetch
-    // The JSON data for the photos and set either that or an error (if failed)
-    useEffect(() => {
-        fetchJSON({ route: 'posts' })
-            .then(_posts => setPosts(_posts))
-            .catch(err => setErrors(err))
-    }, [])
-
-    // Now check if we have comments and errors and return the appropriate type
+    // Now check if we have posts and errors and return the appropriate type
     if (!posts) return null
     if (error) return (<div>{error.message}</div>)
 
-    //if we get here we have comments and no errors so lets map them to a JSX element and return that componenet
+    //if we get here we have posts and no errors so lets map them to a JSX element and return that componenet
     const postElements = posts.map(post =>
         <li key={post.id}>
             <div className="post">
@@ -29,7 +17,7 @@ function Posts() {
         </li>
     )
 
-
+    //now return our formatted JSX element
     return (
         <div className="page">
             <div className="posts-menu">
