@@ -1,0 +1,31 @@
+// Run the below to compile SASS
+// sass [--watch] res/sass/_style.scss:src/App.css
+// This is where all the override styles for Bulma will be done
+@charset "utf-8";
+@import "../../node_modules/bulma/bulma.sass";
+@import "variables";
+@import "fonts";
+
+/* Selctor rule for all css: */
+/* *{
+  font-size: 16px;
+} */
+/* Css for the 'pages' */
+nav{
+    height: 10vh;
+}
+
+.page{
+    /* Make the page take up majority of the screen */
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    top: 10vh;
+    padding: 1rem;
+  
+    /* flexbox setttings */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

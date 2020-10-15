@@ -25,11 +25,11 @@
 - [ ] Style the Master Detail Application
 - [ ] Decide on colour scheme for app
 - [ ] Choose Serif and Sans-Serif Fonts
-- [ ] convert css to sass for 'App.css'
-- [ ] maybe change to using nested routes user/:id/posts or user/:id/albums
+- [x] convert css to sass for 'App.css'
+- [x] add dependancies for bulma with yarn add bulma
 
 ## Bugs:
 
 - [x] ISS-01 Change Comments and Photos to Posts and Albums for assignment requirements
 - [x] ISS-02 Make changes to 'lift' the state up, move the posts/ albums/ users fetch to a higher parent element that can allow the access of these data structures at different points in the application (like viewing specific details for user/ posts/ albums)
-- [ ] ISS-03 change html elements of custom components to more easily style them and potentially set up SASS as well, if needed || also set up main/ header in each component
+- [x] ISS-03 change html elements of custom components to more easily style them and potentially set up SASS as well, if needed || also set up main/ header in each component || also set up bulma
