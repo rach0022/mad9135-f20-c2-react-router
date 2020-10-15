@@ -1,43 +1,36 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
-import fetchJSON from '../modules/fetch.service.js'
 import './UserAlbums.css'
 
-function UserAlbums() {
-    // First set up some state varibles with the useState to then use the hooks api to fetch data
-    const [userAlbums, setUserAlbums] = useState()
-    const [error, setErrors] = useState()
-
-    //now lets use params and get the userId from the url
+function UserAlbums({ albums: userAlbums, error }) {
+    //first lets use params and get the userId from the url
     const { userId } = useParams()
 
-    // Now using our FetchJSON function and the useEFffect function from React we can fetch
-    // The JSON data for the photos and set either that or an error (if failed)
-    useEffect(() => {
-        fetchJSON({ route: 'albums', query: { userId } })
-            .then(_albums => setUserAlbums(_albums))
-            .catch(err => setErrors(err))
-    }, [userId])
-
     // Now check if we have comments and errors and return the appropriate type
-    if (!userAlbums) return null
+    if (userAlbums) {
+        //now lets filter out the albums by the user id
+        const filteredAlbums = userAlbums.filter(album => album.userId === parseInt(userId))
+
+        //if we get here we have comments and no errors so lets map them to a JSX element and return that componenet
+        const albumElements = filteredAlbums.map(album =>
+            <li key={album.id}>{album.title}</li>
+        )
+
+        return (
+            <div className="page">
+                <div className="UserAlbums">
+                    <h1>Users Albums</h1>
+                    <ul>
+                        {albumElements}
+                    </ul>
+                </div>
+            </div>
+        )
+    }
     if (error) return (<div>{error.message}</div>)
 
-    //if we get here we have comments and no errors so lets map them to a JSX element and return that componenet
-    const albumElements = userAlbums.map(album =>
-        <li key={album.id}>{album.title}</li>
-    )
-
-    return (
-        <div className="page">
-            <div className="UserAlbums">
-                <h1>Users Albums</h1>
-                <ul>
-                    {albumElements}
-                </ul>
-            </div>
-        </div>
-    )
+    //if we reach this point return null
+    return null
 }
 
 export default UserAlbums

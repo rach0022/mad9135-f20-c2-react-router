@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
-import fetchJSON from '../modules/fetch.service.js'
 import './UserPosts.css'
 
 function UserPosts({ posts: userPosts, error }) {
@@ -32,7 +31,6 @@ function UserPosts({ posts: userPosts, error }) {
         )
     }
     if (error) return (<div>{error.message}</div>)
-
 
     //if we reach this point return null
     return null
