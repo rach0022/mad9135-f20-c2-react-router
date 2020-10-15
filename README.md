@@ -30,4 +30,4 @@
 ## Bugs:
 
 - [x] ISS-01 Change Comments and Photos to Posts and Albums for assignment requirements
-- [ ] ISS-02 Make changes to 'lift' the state up, move the posts/ albums/ users fetch to a higher parent element that can allow the access of these data structures at different points in the application (like viewing specific details for user/ posts/ albums)
+- [x] ISS-02 Make changes to 'lift' the state up, move the posts/ albums/ users fetch to a higher parent element that can allow the access of these data structures at different points in the application (like viewing specific details for user/ posts/ albums)
