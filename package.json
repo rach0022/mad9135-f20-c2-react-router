@@ -33,5 +33,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "build a simple master/detail application using React with React Router",
+  "main": "index.js",
+  "repository": "https://github.com/rach0022/mad9135-f20-c2-react-router.git",
+  "author": "RaviC Rachamalla <rach0022@algonquinlive.com>",
+  "license": "MIT"
 }
