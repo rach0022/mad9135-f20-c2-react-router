@@ -28,3 +28,5 @@
 - [ ] maybe change to using nested routes user/:id/posts or user/:id/albums
 
 ## Bugs:
+
+- [ ] ISS-01 Change UserPosts & UserAlbums to UserComments and UserPhotos
