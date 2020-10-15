@@ -2,6 +2,13 @@
 .user{
     display: flex;
     flex-direction: column;
+    padding: 10px;
+}
+
+li{
+    list-style: none;
+    border-radius: 10%;
+    margin: 10px
 }
 
 /* Container for buttons in card */
@@ -29,6 +36,6 @@
     padding: 0.2rem 0.4rem;
 }
 
-.link:hover{
+.link:hover, .user:hover{
     background: #8fc86680;
 }

@@ -40,8 +40,13 @@ function Users({ users, error }) {
     return (
         <div className="page">
             <div className="users-list">
-                <h1>Users</h1>
-                <ul>{userElements}</ul>
+                <header>
+                    <h1>All Users</h1>
+                    <p>Time: <em>{new Date().toString()}</em></p>
+                </header>
+                <main>
+                    <ul>{userElements}</ul>
+                </main>
             </div>
         </div>
     )

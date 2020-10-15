@@ -51,11 +51,15 @@ function UserDetails({ users: userDetails, error }) {
         return (
             <div className="page">
                 <div className="UserDetails">
-                    <button onClick={viewHome}>Home</button>
-                    <h1>Detailed View of User</h1>
-                    <ul>
-                        {detailsElements}
-                    </ul>
+                    <header>
+                        <button onClick={viewHome}>Home</button>
+                        <h1>Detailed View of User</h1>
+                    </header>
+                    <main>
+                        <ul>
+                            {detailsElements}
+                        </ul>
+                    </main>
                 </div>
             </div>
         )

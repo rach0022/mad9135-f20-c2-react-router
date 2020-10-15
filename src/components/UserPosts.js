@@ -25,10 +25,14 @@ function UserPosts({ posts: userPosts, error, users }) {
         return (
             <div className="page">
                 <div className="UserPosts">
-                    <h1>{user.name} Posts</h1>
-                    <ul>
-                        {postElements}
-                    </ul>
+                    <header>
+                        <h1>{user.name} Posts</h1>
+                    </header>
+                    <main>
+                        <ul>
+                            {postElements}
+                        </ul>
+                    </main>
                 </div>
             </div>
         )

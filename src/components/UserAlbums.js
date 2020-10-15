@@ -22,10 +22,14 @@ function UserAlbums({ albums: userAlbums, error, users }) {
         return (
             <div className="page">
                 <div className="UserAlbums">
-                    <h1>{user.name} Albums</h1>
-                    <ul>
-                        {albumElements}
-                    </ul>
+                    <header>
+                        <h1>{user.name} Albums</h1>
+                    </header>
+                    <main>
+                        <ul>
+                            {albumElements}
+                        </ul>
+                    </main>
                 </div>
             </div>
         )

@@ -25,11 +25,12 @@ function Posts({ posts, error }) {
                     <h1>All Posts</h1>
                     <p>Time: <em>{new Date().toString()}</em></p>
                 </header>
-                <ul>
-                    {postElements}
-                </ul>
+                <main>
+                    <ul>
+                        {postElements}
+                    </ul>
+                </main>
             </div>
-
         </div>
     )
 }
