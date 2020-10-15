@@ -7,8 +7,8 @@ function AppNav() {
         <nav className="AppNav">
             {/* Since users is home, The path '/' is chosen and exact to match path only */}
             <NavLink to="/">Users</NavLink>
-            <NavLink to="/photos">Photos</NavLink>
-            <NavLink to="/comments">Comments</NavLink>
+            <NavLink to="/albums">Albums</NavLink>
+            <NavLink to="/posts">Posts</NavLink>
         </nav>
     )
 }

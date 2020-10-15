@@ -5,7 +5,7 @@ import './UserAlbums.css'
 
 function UserAlbums() {
     // First set up some state varibles with the useState to then use the hooks api to fetch data
-    const [albums, setAlbums] = useState()
+    const [userAlbums, setUserAlbums] = useState()
     const [error, setErrors] = useState()
 
     //now lets use params and get the userId from the url
@@ -15,16 +15,16 @@ function UserAlbums() {
     // The JSON data for the photos and set either that or an error (if failed)
     useEffect(() => {
         fetchJSON({ route: 'albums', query: { userId } })
-            .then(_albums => setAlbums(_albums))
+            .then(_albums => setUserAlbums(_albums))
             .catch(err => setErrors(err))
     }, [userId])
 
     // Now check if we have comments and errors and return the appropriate type
-    if (!albums) return null
+    if (!userAlbums) return null
     if (error) return (<div>{error.message}</div>)
 
     //if we get here we have comments and no errors so lets map them to a JSX element and return that componenet
-    const albumElements = albums.map(album =>
+    const albumElements = userAlbums.map(album =>
         <li key={album.id}>{album.title}</li>
     )
 

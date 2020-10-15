@@ -5,8 +5,8 @@ import './App.css';
 // import components
 import AppNav from './components/AppNav.js'
 import UserList from './components/UserList.js'
-import PhotoLibrary from './components/PhotoLibrary.js'
-import Comments from './components/Comments.js'
+import Albums from './components/Albums.js'
+import Posts from './components/Posts.js'
 import UserPosts from './components/UserPosts.js'
 import UserAlbums from './components/UserAlbums.js'
 import NotFound from './components/NotFound.js'
@@ -27,12 +27,12 @@ function App() {
               <UserList />
             </Route>
 
-            <Route path="/photos">
-              <PhotoLibrary limit="10" />
+            <Route path="/albums">
+              <Albums />
             </Route>
 
-            <Route path="/comments">
-              <Comments />
+            <Route path="/posts">
+              <Posts />
             </Route>
 
             <Route path="/posts/:userId">
