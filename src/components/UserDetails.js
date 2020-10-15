@@ -1,11 +1,19 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import './UserDetails.css'
 
 //I am renaming the users prop to userDetails for use in this componenet
 function UserDetails({ users: userDetails, error }) {
     //now lets use params and get the userId from the url
     const { userId } = useParams()
+
+    // get a reference to the history from react usehistory() and then create a call back function
+    // for a 'go home' button
+    const appHistory = useHistory()
+
+    function viewHome(ev) {
+        appHistory.push('/') //send the user to home
+    }
 
     // Now check if we have comments and errors and return the appropriate type
     if (userDetails) {
@@ -43,6 +51,7 @@ function UserDetails({ users: userDetails, error }) {
         return (
             <div className="page">
                 <div className="UserDetails">
+                    <button onClick={viewHome}>Home</button>
                     <h1>Detailed View of User</h1>
                     <ul>
                         {detailsElements}
