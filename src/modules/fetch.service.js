@@ -13,7 +13,10 @@ const BASE_URL = 'https://jsonplaceholder.typicode.com'
  * @see https://jsonplaceholder.typicode.com/
  */
 export async function fetchJSON({ route = 'users', query = null }) {
-    const url = query ? `${BASE_URL}/${route}` : `${BASE_URL}/${route}?${query}`
+    let url = `${BASE_URL}/${route}?`
+
+    // Check if we have a query object and then append each key/val pair as a query to the url
+    if (query) for (const [key, val] of Object.entries(query)) url += `${key}=${val}`
     const response = await fetch(url)
     if (!response.ok) throw new Error(response.statusText)
     return response.json()

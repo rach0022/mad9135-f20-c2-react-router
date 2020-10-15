@@ -25,5 +25,6 @@
 - [ ] Decide on colour scheme for app
 - [ ] Choose Serif and Sans-Serif Fonts
 - [ ] convert css to sass for 'App.css'
+- [ ] maybe change to using nested routes user/:id/posts or user/:id/albums
 
 ## Bugs:

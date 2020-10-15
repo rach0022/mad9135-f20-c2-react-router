@@ -1,47 +1,41 @@
 import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import fetchJSON from '../modules/fetch.service.js'
-import './Comments.css'
+import './UserPosts.css'
 
-function Comments() {
+function UserPosts() {
     // First set up some state varibles with the useState to then use the hooks api to fetch data
-    const [comments, setComments] = useState()
+    const [posts, setPosts] = useState()
     const [error, setErrors] = useState()
+
+    //now lets use params and get the userId from the url
+    const { userId } = useParams()
 
     // Now using our FetchJSON function and the useEFffect function from React we can fetch
     // The JSON data for the photos and set either that or an error (if failed)
     useEffect(() => {
-        fetchJSON({ route: 'comments' })
-            .then(_comments => setComments(_comments))
+        fetchJSON({ route: 'posts', query: { userId } })
+            .then(_posts => setPosts(_posts))
             .catch(err => setErrors(err))
-    }, [])
+    }, [userId])
 
     // Now check if we have comments and errors and return the appropriate type
-    if (!comments) return null
+    if (!posts) return null
     if (error) return (<div>{error.message}</div>)
 
     //if we get here we have comments and no errors so lets map them to a JSX element and return that componenet
-    const commentElements = comments.map(comment =>
-        <li key={comment.id}>
-            <div className={comment}>
-                <h4>{comment.name}</h4>
-                <p>{comment.email}</p>
-                <p>{comment.body}</p>
-            </div>
-        </li>
-    )
-
+    const postElements = posts.map(post => <li key={post.id}>{post.title}</li>)
 
     return (
         <div className="page">
-            <div className="comments-menu">
-                <h1>Comments</h1>
+            <div className="UserPosts">
+                <h1>Users Posts</h1>
                 <ul>
-                    {commentElements}
+                    {postElements}
                 </ul>
             </div>
-
         </div>
     )
 }
 
-export default Comments
+export default UserPosts

@@ -7,6 +7,8 @@ import AppNav from './components/AppNav.js'
 import UserList from './components/UserList.js'
 import PhotoLibrary from './components/PhotoLibrary.js'
 import Comments from './components/Comments.js'
+import UserPosts from './components/UserPosts.js'
+import UserAlbums from './components/UserAlbums.js'
 import NotFound from './components/NotFound.js'
 
 function App() {
@@ -19,17 +21,26 @@ function App() {
 
         {/* The Main Part of the application, users route is '/' */}
         <main>
+
           <Switch>
             <Route exact path="/">
               <UserList />
             </Route>
 
             <Route path="/photos">
-              <PhotoLibrary />
+              <PhotoLibrary limit="10" />
             </Route>
 
             <Route path="/comments">
               <Comments />
+            </Route>
+
+            <Route path="/posts/:userId">
+              <UserPosts />
+            </Route>
+
+            <Route path="/albums/:userId">
+              <UserAlbums />
             </Route>
 
             <Route>

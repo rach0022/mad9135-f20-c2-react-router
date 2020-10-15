@@ -4,15 +4,21 @@
   font-size: 16px;
 } */
 /* Css for the 'pages' */
+nav{
+  height: 10vh;
+}
 .page{
   /* Make the page take up majority of the screen */
+  position: absolute;
   width: 100vw;
-  height: 80vh;
+  height: auto;
+  top: 10vh;
   padding: 1rem;
 
   /* flexbox setttings */
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: center;
 }
 

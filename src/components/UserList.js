@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import fetchJSON from '../modules/fetch.service.js'
 import './UserList.css'
 
@@ -21,12 +22,22 @@ function Users() {
     if (error) return (<div>{error.message}</div>)
 
     //if we get here we verify we have users so lets map our array to a new array with JSX and return the user list
-    const userElements = users.map(user => <li key={user.id}>{user.name}</li>)
+    const userElements = users.map(user =>
+        <li key={user.id}>
+            <div className="user">
+                <p>{user.name}</p>
+                <Link to={`/posts/${user.id}`}>Posts</Link>
+                <Link to={`/albums/${user.id}`}>Albums</Link>
+            </div>
+        </li>
+    )
 
     return (
-        <div className="users-menu page">
-            <h1>Users</h1>
-            <ul>{userElements}</ul>
+        <div className="page">
+            <div className="users-list">
+                <h1>Users</h1>
+                <ul>{userElements}</ul>
+            </div>
         </div>
     )
 }

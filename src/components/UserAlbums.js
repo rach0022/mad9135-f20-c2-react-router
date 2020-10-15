@@ -1,47 +1,43 @@
 import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import fetchJSON from '../modules/fetch.service.js'
-import './Comments.css'
+import './UserAlbums.css'
 
-function Comments() {
+function UserAlbums() {
     // First set up some state varibles with the useState to then use the hooks api to fetch data
-    const [comments, setComments] = useState()
+    const [albums, setAlbums] = useState()
     const [error, setErrors] = useState()
+
+    //now lets use params and get the userId from the url
+    const { userId } = useParams()
 
     // Now using our FetchJSON function and the useEFffect function from React we can fetch
     // The JSON data for the photos and set either that or an error (if failed)
     useEffect(() => {
-        fetchJSON({ route: 'comments' })
-            .then(_comments => setComments(_comments))
+        fetchJSON({ route: 'albums', query: { userId } })
+            .then(_albums => setAlbums(_albums))
             .catch(err => setErrors(err))
-    }, [])
+    }, [userId])
 
     // Now check if we have comments and errors and return the appropriate type
-    if (!comments) return null
+    if (!albums) return null
     if (error) return (<div>{error.message}</div>)
 
     //if we get here we have comments and no errors so lets map them to a JSX element and return that componenet
-    const commentElements = comments.map(comment =>
-        <li key={comment.id}>
-            <div className={comment}>
-                <h4>{comment.name}</h4>
-                <p>{comment.email}</p>
-                <p>{comment.body}</p>
-            </div>
-        </li>
+    const albumElements = albums.map(album =>
+        <li key={album.id}>{album.title}</li>
     )
-
 
     return (
         <div className="page">
-            <div className="comments-menu">
-                <h1>Comments</h1>
+            <div className="UserAlbums">
+                <h1>Users Albums</h1>
                 <ul>
-                    {commentElements}
+                    {albumElements}
                 </ul>
             </div>
-
         </div>
     )
 }
 
-export default Comments
+export default UserAlbums
