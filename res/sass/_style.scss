@@ -48,11 +48,25 @@ main, .userDetails{
         max-width: 70vw;
         height: auto;
 
-        @media(min-width: $tablet-breakpoint + 1px){
+        //full HD  view
+        @media(min-width: $widescreen-breakpoint + 1px){
             min-width: 30vw;
             max-width: 30vw;
         }
 
+        //widescreen view
+        @media(min-width: $desktop-breakpoint + 1px) and (max-width: $widescreen-breakpoint){
+            min-width: 23vw;
+            max-width: 23vw;
+            min-height: 325px;
+        }
+        //desktop view
+        @media(min-width: $tablet-breakpoint + 1px) and (max-width: $desktop-breakpoint){
+            min-width: 30vw;
+            max-width: 30vw;
+        }
+
+        //tablet view
         @media (max-width: $tablet-breakpoint) and (min-width: $mobile-breakpoint) {
             min-width: 40vw;
             max-width: 40vw;

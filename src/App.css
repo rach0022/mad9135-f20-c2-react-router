@@ -7579,7 +7579,16 @@ main, .userDetails {
     min-width: 70vw;
     max-width: 70vw;
     height: auto; }
-    @media (min-width: 1024px) {
+    @media (min-width: 1409px) {
+      main .card, .userDetails .card {
+        min-width: 30vw;
+        max-width: 30vw; } }
+    @media (min-width: 1217px) and (max-width: 1408px) {
+      main .card, .userDetails .card {
+        min-width: 23vw;
+        max-width: 23vw;
+        min-height: 325px; } }
+    @media (min-width: 1024px) and (max-width: 1216px) {
       main .card, .userDetails .card {
         min-width: 30vw;
         max-width: 30vw; } }
