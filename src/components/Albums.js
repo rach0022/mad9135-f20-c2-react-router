@@ -27,7 +27,7 @@ function Albums({ albums, error }) {
                     <p className="subtitle">Time: <em>{new Date().toString()}</em></p>
                 </header>
                 <main>
-                    <ul>{albumElements}</ul>
+                    {albumElements}
                 </main>
             </div>
         </div>

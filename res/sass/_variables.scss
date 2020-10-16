@@ -14,6 +14,11 @@ $dark-shade: 	#134D6D;
 $light-accent: 	#B6DE70;
 $light-shade: 	#FAF9FA;
 
+//breakpoitns needed for media queries
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1023px;
+// dont need desktop because its just greater than tablet
+
 
 //testing ovveriding bulma colours:
 // (After testing) determined these are the main bulma elements that 

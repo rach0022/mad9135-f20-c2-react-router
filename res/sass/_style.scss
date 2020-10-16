@@ -31,7 +31,37 @@ nav{
 }
 
 main{
-    @include center(row);
+    // @include center(row);
     // stop the horizontal from showing overflow
     // overflow-x: hidden; //try again later
+
+    display: flex;
+    flex-flow: row wrap;
+
+    //selector for the cards inside
+    // at tablet breakpoint they should take up 40vw
+    // and at desktop breakpoint they should take up 70vw
+    .card{
+        // since it is mobile first we will start off with each card taking up 
+        // 70% of the view width
+        min-width: 70vw;
+        max-width: 70vw;
+        height: auto;
+
+        @media(min-width: $tablet-breakpoint + 1px){
+            min-width: 30vw;
+            max-width: 30vw;
+        }
+
+        @media (max-width: $tablet-breakpoint) and (min-width: $mobile-breakpoint) {
+            min-width: 40vw;
+            max-width: 40vw;
+        }
+    }
+
+}
+
+//header selector for the titles of each '.page'
+header{
+    padding-top: 1rem;
 }

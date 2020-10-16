@@ -12,9 +12,7 @@ function UserDetails({ users: userDetails, error }) {
     // for a 'go home' button
     const appHistory = useHistory()
 
-    function viewHome(ev) {
-        appHistory.push('/') //send the user to home
-    }
+    const viewHome = (ev) => appHistory.push('/') //send the user to home
 
     // Now check if we have comments and errors and return the appropriate type
     if (userDetails) {

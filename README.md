@@ -22,9 +22,9 @@
 
 ## To Do:
 
-- [ ] Style the Master Detail Application
-- [ ] Decide on colour scheme for app
-- [ ] Choose Serif and Sans-Serif Fonts
+- [x] Style the Master Detail Application
+- [x] Decide on colour scheme for app
+- [x] Choose Serif and Sans-Serif Fonts
 - [x] convert css to sass for 'App.css'
 - [x] add dependancies for bulma with yarn add bulma
 - [x] fix bug with bulma nav burger/menu interaction
@@ -32,7 +32,9 @@
 - [x] update styles on userdetails cards
 - [x] add x-icon for REACT Nav App
 - [x] create a 'brand' icon for react nav app
-- [ ] figure out how to stop my spinning loader when the page is loaded || also clean up the pathname that is shown
+- [x] figure out how to stop my spinning loader when the page is loaded || also clean up the pathname that is shown
+- [x] make design responsive by adding media queries
+- [ ] style the go home button/ make a back button instead. || add this button to the user posts/ albums
 
 ## Bugs:
 
