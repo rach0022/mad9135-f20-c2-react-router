@@ -5,13 +5,3 @@
 // $dark-shade: #0094b0;
 // $dark-accent: #bfbfbf;
 // $font-colour: #212121;
-
-//animation for the spinner to be included
-@keyframes spin{
-    from{
-        transform: rotate(0);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}

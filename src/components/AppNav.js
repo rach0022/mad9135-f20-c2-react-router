@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import brandImg from '../img/brand.png'
 import './AppNav.css'
 
 function AppNav() {
@@ -14,9 +15,9 @@ function AppNav() {
 
     // Now inside the JSX I will set the refs inside the burger and menu to access them inside a function
     return (
-        <nav className="navbar">
+        <nav className="navbar is-fixed-top">
             <div className="navbar-brand">
-                <NavLink to="/" className="title navbar-item">React Nav</NavLink>
+                <NavLink to="/" className="navbar-item"><img id="brand" alt="brand logo" src={brandImg}></img></NavLink>
                 {/* eslint-disable-next-line */}
                 <a ref={burgerRef} onClick={toggleMenu} className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>

@@ -7549,11 +7549,6 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
-@keyframes spin {
-  from {
-    transform: rotate(0); }
-  to {
-    transform: rotate(360deg); } }
 /* Selctor rule for all css: */
 /* *{
   font-size: 16px;
@@ -7578,7 +7573,6 @@ nav {
 main {
   position: absolute;
   left: calc(50% - (row / 2));
-  top: calc(50% - (row / 2));
-  overflow-x: hidden; }
+  top: calc(50% - (row / 2)); }
 
 /*# sourceMappingURL=App.css.map */

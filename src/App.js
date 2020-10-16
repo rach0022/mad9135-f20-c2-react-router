@@ -12,7 +12,8 @@ import Posts from './components/Posts.js'
 import UserPosts from './components/UserPosts.js'
 import UserAlbums from './components/UserAlbums.js'
 import UserDetails from './components/UserDetails.js'
-import NotFound from './components/NotFound.js'
+import LoadingSpinner from './components/LoadingSpinner.js' // for the loading spinner while loading
+import NotFound from './components/NotFound.js' // for 404 pages
 
 function App() {
 
@@ -59,6 +60,7 @@ function App() {
             </Route>
           </Switch>
         </section>
+        <LoadingSpinner />
       </Router>
     </div>
   );

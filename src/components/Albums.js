@@ -10,7 +10,7 @@ function Albums({ albums, error }) {
     const albumElements = albums.map(album =>
         <div key={album.id} className="card">
             <div className="card-header">
-                <p className="card-header-title">{album.title}</p>
+                <p className="card-header-title">#{album.id}: {album.title}</p>
             </div>
         </div>
     )
