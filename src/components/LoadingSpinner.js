@@ -1,11 +1,21 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import './LoadingSpinner.css'
 
-function LoadingSpinner() {
+function LoadingSpinner({ loadingRef }) {
+
+    // This will act as a component did mount function, learned from here:
+    // https://www.twilio.com/blog/react-choose-functional-components use effect with an empty dependancy array
+    // Will act like a component did mount function
+    React.useEffect(() => {
+        // Check when the component mounted for testing 
+        // console.log(`I mounted at ${new Date().toString()}`)
+        loadingRef.current.classList = 'modal'
+    }, [loadingRef]) //make sure to use the empty dependancy array 
+
     // first create a reference to the current location
     const location = useLocation()
-    const loadingRef = useRef() //I will use a ref for the modal div
+    // const loadingRef = useRef() //I will use a ref for the modal div
 
     // now with useState I will set the 'target' variable with the location
     // to show where we are loading
@@ -18,10 +28,8 @@ function LoadingSpinner() {
         //for the testing lets send the path only to the loading module
         //first turn on the 'is-active' class and switch the target
         setTarget(location.pathname)
-        loadingRef.current.classList.toggle('is-active')
+        loadingRef.current.classList = 'modal is-active'
 
-        //need to figure out a way to toggle the isActive class after loading is complete
-        loadingRef.current.classList.toggle('is-active')
     }, [location, loadingRef]) //add the location ahd the loadingRef to the dependancies array 
 
     // I will create a modal using the bulma framework to show the spinner

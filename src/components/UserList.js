@@ -2,7 +2,16 @@ import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import './UserList.css'
 
-function Users({ users, error }) {
+function Users({ users, error, loadingRef }) {
+
+    // This will act as a component did mount function, learned from here:
+    // https://www.twilio.com/blog/react-choose-functional-components use effect with an empty dependancy array
+    // Will act like a component did mount function
+    React.useEffect(() => {
+        // Check when the component mounted for testing 
+        // console.log(`I mounted at ${new Date().toString()}`)
+        loadingRef.current.classList = 'modal'
+    }, [loadingRef]) //make sure to use the empty dependancy array 
 
     //first lets get a refrerence to the history using useHistory()
     const appHistory = useHistory()

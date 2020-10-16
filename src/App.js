@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 // import { HashRouter as Router, Switch, Route } from 'react-router-dom' //uncomment for deployment
 // import logo from './logo.svg';
@@ -23,10 +23,14 @@ function App() {
   const [posts, postErrors] = useJSONAPIState({ route: 'posts' })
   const [albums, albumErrors] = useJSONAPIState({ route: 'albums' })
 
+  //create a ref for the loading spinner to be passed around
+  const spinnerRef = useRef()
+
   return (
     <div className="React-Nav-App">
       <Router>
         {/* The custom AppHeader component located in ./components */}
+        <LoadingSpinner loadingRef={spinnerRef} />
         <AppNav />
 
         {/* The Main Part of the application, users route is '/' */}
@@ -34,35 +38,34 @@ function App() {
 
           <Switch>
             <Route exact path="/">
-              <UserList users={users} error={userErrors} />
+              <UserList users={users} error={userErrors} loadingRef={spinnerRef} />
             </Route>
 
             <Route exact path="/albums">
-              <Albums albums={albums} error={albumErrors} />
+              <Albums albums={albums} error={albumErrors} loadingRef={spinnerRef} />
             </Route>
 
             <Route exact path="/posts">
-              <Posts posts={posts} error={postErrors} />
+              <Posts posts={posts} error={postErrors} loadingRef={spinnerRef} />
             </Route>
 
             <Route path="/posts/:userId">
-              <UserPosts posts={posts} error={postErrors} users={users} />
+              <UserPosts posts={posts} error={postErrors} users={users} loadingRef={spinnerRef} />
             </Route>
 
             <Route path="/albums/:userId">
-              <UserAlbums albums={albums} error={albumErrors} users={users} />
+              <UserAlbums albums={albums} error={albumErrors} users={users} loadingRef={spinnerRef} />
             </Route>
 
             <Route path="/users/:userId">
-              <UserDetails users={users} error={userErrors} />
+              <UserDetails users={users} error={userErrors} loadingRef={spinnerRef} />
             </Route>
 
             <Route>
-              <NotFound />
+              <NotFound loadingRef={spinnerRef} />
             </Route>
           </Switch>
         </section>
-        <LoadingSpinner />
       </Router>
     </div>
   );
