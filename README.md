@@ -31,7 +31,8 @@
 - [x] make it so clicking out of the navbar will switch back the focus
 - [x] update styles on userdetails cards
 - [x] add x-icon for REACT Nav App
-- [ ] create a 'brand' icon for react nav app
+- [x] create a 'brand' icon for react nav app
+- [ ] figure out how to stop my spinning loader when the page is loaded || also clean up the pathname that is shown
 
 ## Bugs:
 

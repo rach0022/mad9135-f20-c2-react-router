@@ -10,7 +10,7 @@ function Users({ users, error }) {
     //lets create a callback functions to run when the user clicks on the .user div that will load the details view
     function viewDetails(ev) {
         //get the reference to the user id by splitting the id string on the hypen and taking the second element (1)
-        appHistory.push(`/details/${ev.currentTarget.id.split('-')[1]}`)
+        appHistory.push(`/users/${ev.currentTarget.id.split('-')[1]}`)
     }
 
     //lets create a callback function for the links that stops the event bubbling

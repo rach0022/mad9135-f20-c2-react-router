@@ -17,6 +17,7 @@ import NotFound from './components/NotFound.js' // for 404 pages
 
 function App() {
 
+  //First fetch the users, posts and albums using my custom useJSONAPIState to the corresponding routes
   const [users, userErrors] = useJSONAPIState({ route: 'users' })
   const [posts, postErrors] = useJSONAPIState({ route: 'posts' })
   const [albums, albumErrors] = useJSONAPIState({ route: 'albums' })
@@ -51,7 +52,7 @@ function App() {
               <UserAlbums albums={albums} error={albumErrors} users={users} />
             </Route>
 
-            <Route path="/details/:userId">
+            <Route path="/users/:userId">
               <UserDetails users={users} error={userErrors} />
             </Route>
 
