@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import LoadingSpinner from './LoadingSpinner.js' // for the loading spinner while loading
-// import userIcon from '../img/icon/users.png'
+import userIcon from '../img/icon/users.png'
+import CardIcon from './CardIcon.js'
 import './UserList.css'
 
 function Users({ users, error }) {
@@ -26,6 +27,7 @@ function Users({ users, error }) {
     const userElements = users.map(user =>
         <div className="user card" key={user.id} id={`user-${user.id}`} onClick={viewDetails} >
             <div className="user-details card-content">
+                <CardIcon image={userIcon} />
                 <p className="title is-4">{user.name}</p>
                 <p className="subtitle is-6">{user.email}</p>
                 <p>{user.company.name}</p>

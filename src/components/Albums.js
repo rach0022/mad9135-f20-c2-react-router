@@ -1,5 +1,7 @@
 import React from 'react'
 import LoadingSpinner from './LoadingSpinner.js' // for the loading spinner while loading
+import albumIcon from '../img/icon/album.png'
+import CardIcon from './CardIcon.js'
 import './Albums.css'
 
 function Albums({ albums, error }) {
@@ -10,7 +12,8 @@ function Albums({ albums, error }) {
 
     const albumElements = albums.map(album =>
         <div key={album.id} className="card">
-            <div className="card-header">
+            <div className="card-content">
+                <CardIcon image={albumIcon} />
                 <p className="card-header-title">#{album.id}: {album.title}</p>
             </div>
         </div>

@@ -1,5 +1,7 @@
 import React from 'react'
 import LoadingSpinner from './LoadingSpinner.js' // for the loading spinner while loading
+import postIcon from '../img/icon/post.png'
+import CardIcon from './CardIcon.js'
 import './Posts.css'
 
 function Posts({ posts, error }) {
@@ -15,6 +17,7 @@ function Posts({ posts, error }) {
                 <p className="card-header-title">#{post.id}: <em>{post.title}</em></p>
             </div>
             <div className="card-content">
+                <CardIcon image={postIcon} />
                 <article>{post.body}</article>
             </div>
         </div>
