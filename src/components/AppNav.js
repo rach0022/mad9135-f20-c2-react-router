@@ -16,7 +16,7 @@ function AppNav() {
     return (
         <nav className="navbar">
             <div className="navbar-brand">
-                <p className="title navbar-item">React Nav</p>
+                <NavLink to="/" className="title navbar-item">React Nav</NavLink>
                 {/* eslint-disable-next-line */}
                 <a ref={burgerRef} onClick={toggleMenu} className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>

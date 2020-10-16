@@ -27,37 +27,38 @@ function App() {
         <AppNav />
 
         {/* The Main Part of the application, users route is '/' */}
+        <section className="section">
 
-        <Switch>
-          <Route exact path="/">
-            <UserList users={users} error={userErrors} />
-          </Route>
+          <Switch>
+            <Route exact path="/">
+              <UserList users={users} error={userErrors} />
+            </Route>
 
-          <Route exact path="/albums">
-            <Albums albums={albums} error={albumErrors} />
-          </Route>
+            <Route exact path="/albums">
+              <Albums albums={albums} error={albumErrors} />
+            </Route>
 
-          <Route exact path="/posts">
-            <Posts posts={posts} error={postErrors} />
-          </Route>
+            <Route exact path="/posts">
+              <Posts posts={posts} error={postErrors} />
+            </Route>
 
-          <Route path="/posts/:userId">
-            <UserPosts posts={posts} error={postErrors} users={users} />
-          </Route>
+            <Route path="/posts/:userId">
+              <UserPosts posts={posts} error={postErrors} users={users} />
+            </Route>
 
-          <Route path="/albums/:userId">
-            <UserAlbums albums={albums} error={albumErrors} users={users} />
-          </Route>
+            <Route path="/albums/:userId">
+              <UserAlbums albums={albums} error={albumErrors} users={users} />
+            </Route>
 
-          <Route path="/details/:userId">
-            <UserDetails users={users} error={userErrors} />
-          </Route>
+            <Route path="/details/:userId">
+              <UserDetails users={users} error={userErrors} />
+            </Route>
 
-          <Route>
-            <NotFound />
-          </Route>
-
-        </Switch>
+            <Route>
+              <NotFound />
+            </Route>
+          </Switch>
+        </section>
       </Router>
     </div>
   );
