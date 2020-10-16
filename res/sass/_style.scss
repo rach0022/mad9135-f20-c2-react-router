@@ -41,7 +41,7 @@ main{
     //selector for the cards inside
     // at tablet breakpoint they should take up 40vw
     // and at desktop breakpoint they should take up 70vw
-    .card{
+    .card, .userDetails{
         // since it is mobile first we will start off with each card taking up 
         // 70% of the view width
         min-width: 70vw;

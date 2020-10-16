@@ -31,9 +31,7 @@ function UserAlbums({ albums: userAlbums, error, users }) {
                         <p className="title">{user.name} Albums</p>
                     </header>
                     <main>
-                        <ul>
-                            {albumElements}
-                        </ul>
+                        {albumElements}
                     </main>
                 </div>
             </div>
