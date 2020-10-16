@@ -7572,19 +7572,19 @@ nav {
   height: auto;
   top: 10vh; }
 
-main {
+main, .userDetails {
   display: flex;
   flex-flow: row wrap; }
-  main .card, main .userDetails {
+  main .card, .userDetails .card {
     min-width: 70vw;
     max-width: 70vw;
     height: auto; }
     @media (min-width: 1024px) {
-      main .card, main .userDetails {
+      main .card, .userDetails .card {
         min-width: 30vw;
         max-width: 30vw; } }
     @media (max-width: 1023px) and (min-width: 768px) {
-      main .card, main .userDetails {
+      main .card, .userDetails .card {
         min-width: 40vw;
         max-width: 40vw; } }
 

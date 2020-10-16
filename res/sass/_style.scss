@@ -30,7 +30,7 @@ nav{
     top: 10vh;
 }
 
-main{
+main, .userDetails{
     // @include center(row);
     // stop the horizontal from showing overflow
     // overflow-x: hidden; //try again later
@@ -41,7 +41,7 @@ main{
     //selector for the cards inside
     // at tablet breakpoint they should take up 40vw
     // and at desktop breakpoint they should take up 70vw
-    .card, .userDetails{
+    .card{
         // since it is mobile first we will start off with each card taking up 
         // 70% of the view width
         min-width: 70vw;
