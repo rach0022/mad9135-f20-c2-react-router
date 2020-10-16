@@ -1,33 +1,25 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import './LoadingSpinner.css'
 
 function LoadingSpinner() {
     // first create a reference to the current location
     const location = useLocation()
-    const loadingRef = useRef() //I will use a ref for the modal div
+    // const loadingRef = useRef() //I will use a ref for the modal div
 
     // now with useState I will set the 'target' variable with the location
     // to show where we are loading
     const [target, setTarget] = useState('')
 
-    // now using the useEffect() function I will listen for a location change 
-    useEffect(() => {
-        console.log(location, location.pathname.split('/'), loadingRef.current) //lets test out and see what I have 
+    // now using the useEffect() function I will listen for a location change
+    //add the location to the depandancies array 
+    // and using the value of location.pathname I will either show the path name or show Home (for path '/')
+    useEffect(() => setTarget((location.pathname != '/') ? location.pathname : 'Home'), [location])
 
-        //for the testing lets send the path only to the loading module
-        //first turn on the 'is-active' class and switch the target
-        setTarget(location.pathname)
-        loadingRef.current.classList.toggle('is-active')
 
-        //need to figure out a way to toggle the isActive class after loading is complete
-        loadingRef.current.classList.toggle('is-active')
-    }, [location, loadingRef]) //add the location ahd the loadingRef to the dependancies array 
-
-    // I will create a modal using the bulma framework to show the spinner
-    // While loading is occuring. Add the class 'is-active' to show the spinner 
+    // create a modal using the bulma framework to show the spinner
     return (
-        <div className="modal" ref={loadingRef}>
+        <div className="modal is-active">
             <div className="modal-background"></div>
             <div className="modal-content">
                 {/* This is where my loading spinner will go, contained in a bulma box */}

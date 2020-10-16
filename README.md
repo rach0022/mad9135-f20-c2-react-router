@@ -15,10 +15,10 @@
 - [x] React Router should be used for all navigation.
 - [x] Clicking the link to one of the two related resources from a given user list item will show only the elements for that user.
 - [x] Clicking anywhere else on the user list item should display full details for the selected user including links to the two related resource lists.
-- [ ] While data is being loaded in any component you should have a message/icon/indicator that data is loading. Animated is best because it gets the user's attention.
+- [x] While data is being loaded in any component you should have a message/icon/indicator that data is loading. Animated is best because it gets the user's attention.
 - [x] Create a private repo on GitHub with the name mad9135-f20-c2-react-router.
-- [ ] Invite GitHub user rlmckenney as a collaborator on your private repo.
-- [ ] Submit the URL for your code repo to Brightspace.
+- [x] Invite GitHub user rlmckenney as a collaborator on your private repo.
+- [x] Submit the URL for your code repo to Brightspace.
 
 ## To Do:
 

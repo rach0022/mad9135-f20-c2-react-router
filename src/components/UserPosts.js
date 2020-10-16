@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import LoadingSpinner from './LoadingSpinner.js' // for the loading spinner while loading
 import './UserPosts.css'
 
 function UserPosts({ posts: userPosts, error, users }) {
@@ -42,7 +43,7 @@ function UserPosts({ posts: userPosts, error, users }) {
     if (error) return (<div>{error.message}</div>)
 
     //if we reach this point return null
-    return null
+    return <LoadingSpinner />
 }
 
 export default UserPosts

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams, useHistory } from 'react-router-dom'
+import LoadingSpinner from './LoadingSpinner.js' // for the loading spinner while loading
 import './UserDetails.css'
 
 //I am renaming the users prop to userDetails for use in this componenet
@@ -84,7 +85,7 @@ function UserDetails({ users: userDetails, error }) {
     if (error) return (<div>{error.message}</div>)
 
     //if we reach this point return null
-    return null
+    return <LoadingSpinner />
 }
 
 export default UserDetails

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
+import LoadingSpinner from './LoadingSpinner.js' // for the loading spinner while loading
 import './UserList.css'
 
 function Users({ users, error }) {
@@ -17,7 +18,7 @@ function Users({ users, error }) {
     const stopEventBubbling = ev => ev.stopPropagation()
 
     //if we get back no users lets return nothing for the user list or if we have an error show it
-    if (!users) return null
+    if (!users) return <LoadingSpinner />
     if (error) return (<div>{error.message}</div>)
 
     //if we get here we verify we have users so lets map our array to a new array with JSX and return the user list

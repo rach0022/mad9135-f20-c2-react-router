@@ -1,10 +1,11 @@
 import React from 'react'
+import LoadingSpinner from './LoadingSpinner.js' // for the loading spinner while loading
 import './Posts.css'
 
 function Posts({ posts, error }) {
 
     // Now check if we have posts and errors and return the appropriate type
-    if (!posts) return null
+    if (!posts) return <LoadingSpinner />
     if (error) return (<div>{error.message}</div>)
 
     //if we get here we have posts and no errors so lets map them to a JSX element and return that componenet

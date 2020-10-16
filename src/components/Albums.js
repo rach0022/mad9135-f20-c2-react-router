@@ -1,10 +1,11 @@
 import React from 'react'
+import LoadingSpinner from './LoadingSpinner.js' // for the loading spinner while loading
 import './Albums.css'
 
 function Albums({ albums, error }) {
 
     //Now to check if we have photos or an error
-    if (!albums) return null
+    if (!albums) return <LoadingSpinner />
     if (error) return (<div>{error.message}</div>)
 
     const albumElements = albums.map(album =>
