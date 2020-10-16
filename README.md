@@ -40,3 +40,4 @@
 - [x] ISS-02 Make changes to 'lift' the state up, move the posts/ albums/ users fetch to a higher parent element that can allow the access of these data structures at different points in the application (like viewing specific details for user/ posts/ albums)
 - [x] ISS-03 change html elements of custom components to more easily style them and potentially set up SASS as well, if needed || also set up main/ header in each component || also set up bulma
 - [ ] ISS-04 (optional) update albums to grab the photos from /albums/:albumId/photos
+- [ ] ISS-05 Convert to React Class Componenets to see if i can use the didMount() function to finish loading the animation. Current function becomes the render function and componentDidMount() Will fire an event possibly? Pass around a ref maybe to reference to the spinner?
