@@ -22,19 +22,17 @@ function Users({ users, error }) {
 
     //if we get here we verify we have users so lets map our array to a new array with JSX and return the user list
     const userElements = users.map(user =>
-        <li key={user.id} id={`user-${user.id}`} onClick={viewDetails}>
-            <div className="user card">
-                <div className="user-details card-content">
-                    <p className="title is-4">{user.name}</p>
-                    <p className="subtitle is-6">{user.email}</p>
-                    <p>{user.company.name}</p>
-                </div>
-                <div className="card-footer">
-                    <Link to={`/albums/${user.id}`} onClick={stopEventBubbling} className="button link card-footer-item">Albums</Link>
-                    <Link to={`/posts/${user.id}`} onClick={stopEventBubbling} className="button link card-footer-item">Posts</Link>
-                </div>
+        <div className="user card" key={user.id} id={`user-${user.id}`} onClick={viewDetails} >
+            <div className="user-details card-content">
+                <p className="title is-4">{user.name}</p>
+                <p className="subtitle is-6">{user.email}</p>
+                <p>{user.company.name}</p>
             </div>
-        </li>
+            <div className="card-footer">
+                <Link to={`/albums/${user.id}`} onClick={stopEventBubbling} className="button link card-footer-item">Albums</Link>
+                <Link to={`/posts/${user.id}`} onClick={stopEventBubbling} className="button link card-footer-item">Posts</Link>
+            </div>
+        </div>
     )
 
     return (
@@ -45,7 +43,7 @@ function Users({ users, error }) {
                     <p className="subtitle">Time: <em>{new Date().toString()}</em></p>
                 </header>
                 <main>
-                    <ul>{userElements}</ul>
+                    {userElements}
                 </main>
             </div>
         </div>

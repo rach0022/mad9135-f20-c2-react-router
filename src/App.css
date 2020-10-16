@@ -7575,4 +7575,10 @@ nav {
   align-items: center;
   justify-content: center; }
 
+main {
+  position: absolute;
+  left: calc(50% - (row / 2));
+  top: calc(50% - (row / 2));
+  overflow-x: hidden; }
+
 /*# sourceMappingURL=App.css.map */

@@ -29,3 +29,9 @@ nav{
     align-items: center;
     justify-content: center;
 }
+
+main{
+    @include center(row);
+    // stop the horizontal from showing overflow
+    // overflow-x: hidden; //try again later
+}

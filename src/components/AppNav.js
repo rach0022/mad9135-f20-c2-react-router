@@ -26,9 +26,9 @@ function AppNav() {
             </div>
             <div className="navbar-menu" ref={menuRef} >
                 <div className="navbar-end">
-                    <NavLink to="/" className="navbar-item" >Users</NavLink>
-                    <NavLink to="/albums" className="navbar-item" >Albums</NavLink>
-                    <NavLink to="/posts" className="navbar-item" >Posts</NavLink>
+                    <NavLink to="/" className="navbar-item" onClick={toggleMenu} >Users</NavLink>
+                    <NavLink to="/albums" className="navbar-item" onClick={toggleMenu} >Albums</NavLink>
+                    <NavLink to="/posts" className="navbar-item" onClick={toggleMenu} >Posts</NavLink>
                 </div>
             </div>
 
