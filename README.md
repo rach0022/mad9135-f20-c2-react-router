@@ -30,7 +30,7 @@
 - [x] fix bug with bulma nav burger/menu interaction
 - [x] make it so clicking out of the navbar will switch back the focus
 - [x] update styles on userdetails cards
-- [ ] add x-icon for REACT Nav App
+- [x] add x-icon for REACT Nav App
 - [ ] create a 'brand' icon for react nav app
 
 ## Bugs:
