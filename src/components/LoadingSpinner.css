@@ -14,7 +14,7 @@
     background-color: none;
 
     /* // Now lets play with the border styles */
-    border: 10px solid black; /* change color later to brand color*/
+    border: 10px solid #B6DE70; /* change color later to brand color*/
     border-style: dashed;
 
     /* //set the animation for the spinner */

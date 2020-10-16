@@ -18,7 +18,7 @@
     /* height: 20px; */
     width: auto;
     /* text-decoration: none; */
-    color: 	hsl(95, 47%, 59%);
+    /* color: 	hsl(95, 47%, 59%); */
 
     /* background for button */
     /* background: none; */
@@ -32,5 +32,5 @@
 }
 
 .link:hover, .user:hover{
-    background: #8fc86680;
+    background: #B6DE70;
 }
