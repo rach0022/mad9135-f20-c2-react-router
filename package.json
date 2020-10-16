@@ -12,7 +12,10 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
+  "homepage": "https://rach0022.github.io/mad9135-f20-c2-react-router",
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
