@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import LoadingSpinner from './LoadingSpinner.js' // for the loading spinner while loading
+import userIcon from '../img/icon/users.png'
 import './UserList.css'
 
 function Users({ users, error }) {

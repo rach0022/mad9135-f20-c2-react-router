@@ -2,8 +2,8 @@
 // sass [--watch] res/sass/_style.scss:src/App.css
 // This is where all the override styles for Bulma will be done
 @charset "utf-8";
+@import "variables"; //import variables before bulma to overide any colours
 @import "../../node_modules/bulma/bulma.sass";
-@import "variables";
 @import "fonts";
 
 /* Selctor rule for all css: */
@@ -11,6 +11,12 @@
   font-size: 16px;
 } */
 /* Css for the 'pages' */
+* {
+    font-family: 'Balthazar', serif;
+}
+.title, h1, h2, h3, h4, h5, h6, .subtitle {
+    font-family: 'Orbitron', sans-serif;
+}
 nav{
     height: 10vh;
 }
@@ -21,13 +27,6 @@ nav{
     width: 100vw;
     height: auto;
     top: 10vh;
-    padding: 1rem;
-  
-    /* flexbox setttings */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
 }
 
 main{

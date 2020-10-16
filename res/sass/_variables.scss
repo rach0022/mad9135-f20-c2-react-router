@@ -1,7 +1,25 @@
 // chosen using: Google MAterial IO Colour Tool
+// Kept over from HTML5 Weather App - CloudWatchR
 // $light-shade: #7ff8ff; 
 // $light-accent: #f2f2f2;
 // $brand-colour: #41c5e2;
 // $dark-shade: #0094b0;
 // $dark-accent: #bfbfbf;
 // $font-colour: #212121;
+
+//Green theme this time, potentially
+$light-shade: 	hsl(95, 47%, 69%);
+$brand-shade: 	hsl(95, 47%, 59%);
+$dark-shade: 	hsl(95, 47%, 39%);
+
+
+//testing ovveriding bulma colours:
+// (After testing) determined these are the main bulma elements that 
+// colours should be changed for
+// $body-background-color: $dark-shade;
+// $navbar-background-color: $light-shade;
+// $navbar-item-hover-background-color: $light-shade;
+// $modal-background-color: $light-shade;
+// $box-background-color: $light-shade;
+// $card-background-color: $light-shade;
+// $button-background-color: $light-shade;

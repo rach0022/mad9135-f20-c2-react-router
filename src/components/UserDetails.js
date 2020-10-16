@@ -32,7 +32,7 @@ function UserDetails({ users: userDetails, error }) {
                     <div className="card-content">
                         <div className="content">
                             <p className="email subtitle">{detail.email}</p>
-                            <p className="phone">{detail.phone}</p>
+                            <p>{detail.phone}</p>
                             <a href={detail.website}>{detail.website}</a>
                         </div>
                     </div>
@@ -43,11 +43,11 @@ function UserDetails({ users: userDetails, error }) {
                     </div>
                     <div className="card-content">
                         <div className="content">
-                            <p className="city">{detail.address.city}</p>
-                            <p className="street">{detail.address.street}</p>
-                            <p className="suite">{detail.address.suite}</p>
-                            <p className="zipcode">{detail.address.zipcode}</p>
-                            <p className="coordinates">{detail.address.geo.lat}, {detail.address.geo.lng}</p>
+                            <p>{detail.address.city}</p>
+                            <p>{detail.address.street}</p>
+                            <p>{detail.address.suite}</p>
+                            <p>{detail.address.zipcode}</p>
+                            <p>{detail.address.geo.lat}, {detail.address.geo.lng}</p>
                         </div>
                     </div>
                 </div>
@@ -59,8 +59,8 @@ function UserDetails({ users: userDetails, error }) {
                     <div className="card-content">
                         <div className="content">
                             <p className="subtitle">{detail.company.name}</p>
-                            <p className="company-phrase">{detail.company.catchPhrase}</p>
-                            <p className="company-bs">{detail.company.bs}</p>
+                            <p >{detail.company.catchPhrase}</p>
+                            <p >{detail.company.bs}</p>
                         </div>
                     </div>
                 </div>

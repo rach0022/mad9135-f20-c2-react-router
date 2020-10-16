@@ -24,7 +24,8 @@ function App() {
 
   return (
     <div className="React-Nav-App">
-      <Router>
+      {/* Add the force refresh tag to cause a reload of data for testing but can easily switch it off */}
+      <Router forceRefresh={true}>
         {/* The custom AppHeader component located in ./components */}
         <AppNav />
 

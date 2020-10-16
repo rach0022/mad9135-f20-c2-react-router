@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*! bulma.io v0.9.1 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
+@import url("https://fonts.googleapis.com/css2?family=Balthazar&family=Orbitron&display=swap");
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
@@ -7554,6 +7555,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-size: 16px;
 } */
 /* Css for the 'pages' */
+* {
+  font-family: 'Balthazar', serif; }
+
+.title, h1, h2, h3, h4, h5, h6, .subtitle {
+  font-family: 'Orbitron', sans-serif; }
+
 nav {
   height: 10vh; }
 
@@ -7562,13 +7569,7 @@ nav {
   position: absolute;
   width: 100vw;
   height: auto;
-  top: 10vh;
-  padding: 1rem;
-  /* flexbox setttings */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center; }
+  top: 10vh; }
 
 main {
   position: absolute;

@@ -14,7 +14,7 @@ function LoadingSpinner() {
     // now using the useEffect() function I will listen for a location change
     //add the location to the depandancies array 
     // and using the value of location.pathname I will either show the path name or show Home (for path '/')
-    useEffect(() => setTarget((location.pathname != '/') ? location.pathname : 'Home'), [location])
+    useEffect(() => setTarget((location.pathname !== '/') ? location.pathname.toUpperCase().split('/')[1] : 'HOME'), [location])
 
 
     // create a modal using the bulma framework to show the spinner
