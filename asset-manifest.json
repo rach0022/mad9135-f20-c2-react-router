@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/mad9135-f20-c2-react-router/static/css/main.12f738f1.chunk.css",
+    "main.js": "/mad9135-f20-c2-react-router/static/js/main.abe8f5da.chunk.js",
+    "main.js.map": "/mad9135-f20-c2-react-router/static/js/main.abe8f5da.chunk.js.map",
+    "runtime-main.js": "/mad9135-f20-c2-react-router/static/js/runtime-main.4fe883f2.js",
+    "runtime-main.js.map": "/mad9135-f20-c2-react-router/static/js/runtime-main.4fe883f2.js.map",
+    "static/js/2.9ad0ac55.chunk.js": "/mad9135-f20-c2-react-router/static/js/2.9ad0ac55.chunk.js",
+    "static/js/2.9ad0ac55.chunk.js.map": "/mad9135-f20-c2-react-router/static/js/2.9ad0ac55.chunk.js.map",
+    "index.html": "/mad9135-f20-c2-react-router/index.html",
+    "precache-manifest.666ffb9f24fdb01ee7f2e808bdc6e95e.js": "/mad9135-f20-c2-react-router/precache-manifest.666ffb9f24fdb01ee7f2e808bdc6e95e.js",
+    "service-worker.js": "/mad9135-f20-c2-react-router/service-worker.js",
+    "static/css/main.12f738f1.chunk.css.map": "/mad9135-f20-c2-react-router/static/css/main.12f738f1.chunk.css.map",
+    "static/js/2.9ad0ac55.chunk.js.LICENSE.txt": "/mad9135-f20-c2-react-router/static/js/2.9ad0ac55.chunk.js.LICENSE.txt",
+    "static/media/album.png": "/mad9135-f20-c2-react-router/static/media/album.e699f3e1.png",
+    "static/media/brand.png": "/mad9135-f20-c2-react-router/static/media/brand.a3df0b7a.png",
+    "static/media/users.png": "/mad9135-f20-c2-react-router/static/media/users.d7e0aee5.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4fe883f2.js",
+    "static/js/2.9ad0ac55.chunk.js",
+    "static/css/main.12f738f1.chunk.css",
+    "static/js/main.abe8f5da.chunk.js"
+  ]
+}
